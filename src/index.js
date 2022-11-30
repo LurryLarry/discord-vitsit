@@ -1,9 +1,15 @@
 require('dotenv').config();
-const { mongoose } = require('mongoose');
+const express = require('express');
 const { Joke } = require('./database');
 
 const { botToken } = process.env;
 const { Client, GatewayIntentBits } = require('discord.js');
+
+const app = express();
+
+app.get('/healthz', (req, res) => {
+  res.status(200).send('Ok');
+});
 
 const client = new Client({
   intents: [
@@ -78,3 +84,8 @@ client.on("messageCreate", msg => {
 })
 
 client.login(botToken);
+
+const PORT = 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})
