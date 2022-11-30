@@ -2,10 +2,10 @@
   "name": "discord-vitsit",
   "version": "1.0.0",
   "description": "",
-  "main": "src/bot.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node bot.js",
-    "devStart": "nodemon bot.js",
+    "start": "node index.js",
+    "devStart": "nodemon index.js",
     "test": "node ."
   },
   "keywords": [],
