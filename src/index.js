@@ -69,7 +69,7 @@ client.on("messageCreate", msg => {
 
   if (msg.content === "!montako") {
     Joke.find({}).then(jokes => {
-      const jokesAmount = Object.keys(jokes).length - 1;
+      const jokesAmount = Object.keys(jokes).length;
       msg.channel.send("Vitsejä yhteensä " + jokesAmount);
     })
   }
