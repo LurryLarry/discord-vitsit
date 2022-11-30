@@ -7,7 +7,7 @@ const { Client, GatewayIntentBits } = require('discord.js');
 
 const app = express();
 
-app.get('/healthz', (req, res) => {
+app.get('/', (req, res) => {
   res.status(200).send('Ok');
 });
 
