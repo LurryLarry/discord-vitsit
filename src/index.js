@@ -36,7 +36,7 @@ client.on("messageCreate", msg => {
       const randKey = keys[randIndex];
       joke = jokes[randKey].joke;
       author = jokes[randKey].author || "Tuntematon";
-      msg.channel.send("Melekone vitsi käyttäjältä " + author + " :joy:: \n" + joke);
+      msg.channel.send("Melekone vitsi käyttäjältä " + author + " :joy:: \n \n" + joke);
     })
   }
 })
