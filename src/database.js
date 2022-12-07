@@ -25,6 +25,7 @@ jokeSchema.set('toJSON', {
     delete returnedObject.__v;
   }
 })
+console.log('test')
 
 const Joke = mongoose.model('Joke', jokeSchema);
 
