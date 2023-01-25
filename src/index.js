@@ -24,7 +24,7 @@ client.on("ready", () => {
 });
 
 client.on("messageCreate", msg => {
-  if (msg.author == client.user) return;
+  if (msg.author === client.user) return;
 
   if (msg.content.toLowerCase() === "!vitsi") {
     let joke;
@@ -42,7 +42,7 @@ client.on("messageCreate", msg => {
 })
 
 client.on("messageCreate", msg => {
-  if (msg.author == client.user) return;
+  if (msg.author === client.user) return;
 
   if (msg.content.toLowerCase().startsWith("!lisää")) {
     if (msg.content.length < 10) {
@@ -65,7 +65,7 @@ client.on("messageCreate", msg => {
 })
 
 client.on("messageCreate", msg => {
-  if (msg.author == client.user) return;
+  if (msg.author === client.user) return;
 
   if (msg.content === "!montako") {
     Joke.find({}).then(jokes => {
@@ -76,7 +76,7 @@ client.on("messageCreate", msg => {
 })
 
 client.on("messageCreate", msg => {
-  if (msg.author == client.user) return;
+  if (msg.author === client.user) return;
 
   if (msg.content === "sii see salmon") {
     msg.channel.send(":+1: :eyes: :fish:");
